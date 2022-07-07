@@ -1,0 +1,58 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@mixin title {
+	position: relative;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 33px;
+	letter-spacing: 0.06em;
+	text-align: center;
+	text-transform: uppercase;
+	&::after {
+		position: absolute;
+		content: "";
+		width: 86px;
+		height: 2px;
+		background-color: #ffffff;
+		top: 54px;
+		left: calc(50% - 43px);
+	}
+}
+
+@mixin title-big {
+	position: relative;
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 55px;
+	letter-spacing: 0.09em;
+	text-align: left;
+	text-transform: uppercase;
+	&::after {
+		position: absolute;
+		content: "";
+		width: 86px;
+		height: 2px;
+		background-color: #ffffff;
+		top: 140px;
+		left: 0;
+	}
+}
+
+@mixin button {
+	padding: 19px 37px 16px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 13px;
+	text-align: center;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	border: 1px solid #ffffff;
+}
