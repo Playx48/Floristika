@@ -1217,5 +1217,6 @@ footer {
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   body {
     background-image: url(../img/bg-stripe@2x.png), url(../img/bg@2x.png);
+    background-size: 1920px 75px, 1920px 1044px; 
   }
 }
